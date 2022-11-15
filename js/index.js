@@ -11,6 +11,8 @@ toggler.addEventListener("click", () => {
 
 items.forEach(element => {
   element.addEventListener("click", () => {
-    list.classList.toggle("flex-column");
+    if(!mediaQuery.matches){
+      list.classList.toggle("flex-column");
+    }
   });
 });
