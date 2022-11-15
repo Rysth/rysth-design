@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400;600;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/claris-sans");
+@import url("https://fonts.cdnfonts.com/css/gryphon-rock");
+
+@font-face {
+  font-family: "Camar";
+  src: url("../assets/fonts/Camar.otf");
+}
+
+:root {
+  --PCL-blue: rgb(83, 143, 251);
+  --PCL-purple: rgb(121, 97, 252);
+  --PCL-purple-dark: rgb(69, 48, 190);
+  --PCL-green: rgb(97, 252, 149);
+  --PCL-green-dark: rgb(21, 170, 71);
+  --PCL-red: rgb(234, 67, 53);
+
+  --NCL-black: rgb(0, 0, 0);
+  --NCL-white: rgb(255, 255, 255);
+
+  --GRD-blue-purple: linear-gradient(
+    135deg,
+    var(--PCL-blue) 30%,
+    var(--PCL-purple)
+  );
+
+  --FF-urbanist: "Urbanist", sans-serif;
+  --FF-camar: "Camar", sans-serif;
+  --FF-gryphon: "Gryphon Rock", sans-serif;
+  --FF-claris-sans: "Claris Sans", sans-serif;
+
+  --FS-title: clamp(2.3rem, 2.3rem + 1vw, 3rem);
+  --FS-subtitle: clamp(1.5rem, 1.3rem + 1vw, 1.8rem);
+  --FS-description: clamp(0.7rem, 0.9rem + 1vw, 1.3rem);
+}
+
+*,
+html {
+  box-sizing: border-box;
+  transition: 0.2s;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--NCL-black);
+  height: 100%;
+  margin: 0;
+  display: grid;
+  grid-auto-flow: row;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+svg {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--NCL-white);
+}
+
+section {
+  padding: 3vh;
+  margin-block: 1vh;
+}
+
+p {
+  line-height: 1.5;
+  font-family: var(--FF-urbanist);
+  font-size: var(--FS-description);
+}
+
+/* GENERAL STYLES */
+
+.text-white {
+  color: var(--NCL-white);
+}
+
+.text-blue {
+  color: var(--PCL-blue);
+}
+
+.text-purple {
+  color: var(--PCL-purple);
+}
+
+.text-green {
+  color: var(--PCL-green);
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.size-title {
+  font-size: var(--FS-title);
+  font-family: var(--FF-gryphon);
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.size-subtitle {
+  font-size: var(--FS-subtitle);
+  font-family: var(--FF-claris-sans);
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.primary-button {
+  background: var(--PCL-purple-dark);
+  font-family: var(--FF-urbanist);
+  margin-block: 5vh !important;
+  display: inline-block;
+  letter-spacing: 0.15rem;
+  padding: 1rem;
+  font-weight: bold;
+  width: min(90%, 150px);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.display-grid {
+  display: grid;
+}
+
+.covered-image {
+  height: 100%;
+}
+
+.content {
+  margin-inline: auto;
+  width: min(100%, 550px);
+}
+
+.background-green {
+  background-color: var(--PCL-green-dark);
+}
+
+.background-red {
+  background-color: var(--PCL-red);
+}
+
+/* HEADER */
+
+header {
+  padding: 3vh;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: min(42%, 180px);
+}
+
+.navbar-toggle {
+  flex: 2;
+  display: inherit;
+  justify-content: flex-end;
+  cursor: pointer;
+  color: var(--NCL-white);
+  font-size: clamp(1.3rem, 1.1rem + 2vw, 2rem);
+}
+
+.navbar-list {
+  display: none;
+  list-style: none;
+  font-family: var(--FF-urbanist);
+  font-size: var(--FS-description);
+  font-weight: bold;
+  padding-left: 0;
+  gap: 5vw;
+  color: var(--NCL-white);
+}
+
+.navbar-list li a:hover {
+  color: var(--PCL-purple);
+}
+
+/* MAIN */
+
+main {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+/* HERO SECTION */
+
+#hero-section .picture {
+  position: relative;
+}
+
+#hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--PCL-blue);
+  mix-blend-mode: hue;
+}
+
+/* CODING SECTION */
+
+#coding-section {
+  grid-auto-flow: row;
+  grid-auto-rows: 1fr auto;
+}
+
+#coding-section .picture {
+  position: relative;
+}
+
+#coding-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--PCL-purple);
+  mix-blend-mode: hue;
+}
+
+/* ABOUT SECTION */
+
+#about-section {
+  background-color: var(--PCL-purple-dark);
+}
+
+#about-section .picture {
+  position: relative;
+}
+
+#about-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--PCL-purple);
+  mix-blend-mode: hue;
+}
+
+#about-section .content a {
+  background: var(--PCL-green);
+  color: var(--NCL-black);
+}
+
+/* CONTACTS SECTION */
+
+#contacts-section {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: 1fr;
+}
+
+.contact-card {
+  margin-block: 2rem;
+  text-align: center;
+}
+
+.contact-card h3 {
+  margin-block: 0.8rem;
+}
+
+.contact-card .contact-button {
+  margin: 1rem auto;
+  font-weight: lighter;
+  font-size: var(--FS-description) !important;
+  font-family: var(--FF-urbanist);
+  font-weight: bold;
+  display: block;
+  padding: 1rem;
+  max-width: 15rem;
+}
+
+/* DESKTOP VERSION */
+
+@media (min-width: 1100px) {
+  section {
+    padding: 5vh 0 !important;
+    margin-block: 5vh;
+  }
+
+  header {
+    padding: 3vh 12vh;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  nav {
+    flex: 2;
+  }
+
+  .navbar-list {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .content {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr 500px;
+    place-items: center;
+    place-content: center;
+    width: 1000px;
+    gap: 5vw;
+  }
+
+  #contacts-section .content {
+    grid-auto-columns: 1fr 350px;
+  }
+
+  section img {
+    max-height: 35rem;
+    width: 35rem;
+  }
+
+  .primary-button:hover {
+    background: var(--NCL-white);
+    color: var(--NCL-black);
+  }
+
+  #about-section .content a:hover {
+    background: var(--NCL-white);
+    color: var(--NCL-black);
+  }
+
+  .contact-card .contact-button:hover {
+    background: var(--NCL-white);
+    color: var(--NCL-black);
+  }
+}
