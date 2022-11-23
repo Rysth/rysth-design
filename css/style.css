@@ -30,6 +30,7 @@
   --FF-claris-sans: "Claris Sans", sans-serif;
 
   --FS-title: 2.7rem;
+  --FS-subtitle: 2.3rem;
   --FS-description: 1.3rem;
 }
 
@@ -104,6 +105,12 @@ p {
   position: relative;
 }
 
+.picture{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -138,6 +145,15 @@ p {
 
 .size-title {
   font-size: var(--FS-title);
+  font-family: var(--FF-gryphon);
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+.size-subtitle {
+  font-size: var(--FS-subtitle);
   font-family: var(--FF-gryphon);
   text-transform: uppercase;
   line-height: 1.1;
@@ -294,7 +310,7 @@ main {
   }
 
   main > section {
-    padding: 15vh;
+    padding: 10vh 15vh;
     margin: 3vh 0;
     display: flex;
     justify-content: center;
@@ -326,10 +342,6 @@ main {
     background-color: transparent;
   }
 
-  .picture{
-    width: 100%;
-    height: 100%;
-  }
 
   .content {
     grid-auto-flow: column;
