@@ -2,22 +2,22 @@ const projectObjects = [
   {
     TYPE: "CARD",
     URL: "https://tinyurl.com/rysthdesign",
-    IMAGE: "../assets/images/JPG-PNG/PROJECTS/DC-rysth-design.jpg",
+    IMAGE: "assets/images/JPG-PNG/PROJECTS/DC-rysth-design.jpg",
   },
   {
     TYPE: "WEBSITE",
     URL: "https://tinyurl.com/rysthdesign",
-    IMAGE: "../assets/images/JPG-PNG/PROJECTS/WP-rysth-design.jpg",
+    IMAGE: "assets/images/JPG-PNG/PROJECTS/WP-rysth-design.jpg",
   },
   {
     TYPE: "CARD",
     URL: "https://tinyurl.com/jprefrigeraciondigitalcard",
-    IMAGE: "../assets/images/JPG-PNG/PROJECTS/DC-jprefrigeracion.jpg",
+    IMAGE: "assets/images/JPG-PNG/PROJECTS/DC-jprefrigeracion.jpg",
   },
   {
     TYPE: "WEBSITE",
     URL: "https://tinyurl.com/jprefrigeracion",
-    IMAGE: "../assets/images/JPG-PNG/PROJECTS/WP-jprefrigeracion.jpg",
+    IMAGE: "assets/images/JPG-PNG/PROJECTS/WP-jprefrigeracion.jpg",
   },
 ];
 
