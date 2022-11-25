@@ -1,24 +1,30 @@
 const projectObjects = [
   {
-    TYPE: "CARD",
-    URL: "https://tinyurl.com/rysthdesign",
-    IMAGE: "assets/images/JPG-PNG/PROJECTS/DC-rysth-design.jpg",
-  },
-  {
     TYPE: "WEBSITE",
     URL: "https://tinyurl.com/rysthdesign",
     IMAGE: "assets/images/JPG-PNG/PROJECTS/WP-rysth-design.jpg",
-  },
-  {
-    TYPE: "CARD",
-    URL: "https://tinyurl.com/jprefrigeraciondigitalcard",
-    IMAGE: "assets/images/JPG-PNG/PROJECTS/DC-jprefrigeracion.jpg",
   },
   {
     TYPE: "WEBSITE",
     URL: "https://tinyurl.com/jprefrigeracion",
     IMAGE: "assets/images/JPG-PNG/PROJECTS/WP-jprefrigeracion.jpg",
   },
+  {
+    TYPE: "CARD",
+    URL: "https://basiccard.netlify.app/",
+    IMAGE: "assets/images/JPG-PNG/PROJECTS/DC-rysth-design.jpg",
+  },
+  {
+    TYPE: "CARD",
+    URL: "https://elementalcard.netlify.app/",
+    IMAGE: "assets/images/JPG-PNG/PROJECTS/DC-pethost.jpg",
+  },
+  {
+    TYPE: "CARD",
+    URL: "https://esentialcard.netlify.app/",
+    IMAGE: "assets/images/JPG-PNG/PROJECTS/DC-burguers.jpg",
+  },
+
 ];
 
 const cardsProjects = document.querySelector(".digital-cards");
@@ -35,6 +41,7 @@ window.onload = () => {
     overlay.className = "overlay-black";
 
     url.href = object.URL.trim();
+    url.target = "_blank";
 
     image.className = "project-image"
     image.src = object.IMAGE.trim();
